@@ -1,9 +1,9 @@
 
 # PROGRAMMING WITH POWERSHELL
 
-By: Sumeet Singh
+By: Sumeet Chand
 
-Date: July 2024
+Date: May 2026
 
 # TABLE OF CONTENTS
 - [1. Terminologies](#terminologies)
@@ -13,6 +13,9 @@ Date: July 2024
 - [5. Common Commands](#common-commands)
 - [6. Scripts](#scripts)
 - [7. Winget](#winget)
+- [8. microsoft 365 azure ad](#microsoft-365-azure-ad)
+- [9. microsoft 365 exchange](#microsoft-365-exchange)
+- [10. SHAREPOINT ONLINE](#sharepoint-online)
 
 # TERMINOLOGIES
 
@@ -49,15 +52,27 @@ PS C:\Users\Sumeet\Documents\sandbox>
 
 RUN SCRIPT BLOCK IN MULTIPLE LINES IN NON ISE POWERSHELL
 ```powershell
-# encase your commands in a .{} e.g.
-. {
-"Starting!"
-$a = Read-Host -Prompt 'Enter something'
-"Entered: $a"
-"Completed"
-}
+# encase your commands in a .{} e.g. the below can be copy and pasted directly into PowerShell non ISE to keep formatting. Good for large scripts
+. {Send-MailMessage `
+  -From "reception@drshakenovsky.com.au" `
+  -To "sumeet@sapphirecs.com.au" `
+  -Subject "Test Email" `
+  -Body "This is a test email via Office 365 SMTP relay." `
+  -SmtpServer "drshakenovsky-com-au.mail.protection.outlook.com" `
+  -Port 25}
 
 # or
+```
+
+SMTP TEST
+```powershell
+Send-MailMessage `
+  -From "reception@drshakenovsky.com.au" `
+  -To "sumeet@sapphirecs.com.au" `
+  -Subject "Test Email" `
+  -Body "This is a test email via Office 365 SMTP relay." `
+  -SmtpServer "drshakenovsky-com-au.mail.protection.outlook.com" `
+  -Port 25
 ```
 
 FIND A CMDLETS PROPERTIES & METHODS
