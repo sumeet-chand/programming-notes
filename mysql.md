@@ -1,7 +1,7 @@
 
 # PROGRAMMING WITH MYSQL
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: July 2024
 
@@ -57,10 +57,10 @@ everything/default/*
 OPTIONAL - Find DB running port MacOS/Linux
 Result is usually default 3306
 ```bash
-sumeetsingh@Sumeets-Air sandbox % lsof -iTCP -sTCP:LISTEN -P | grep mysql 
+sumeetChand@Sumeets-Air sandbox % lsof -iTCP -sTCP:LISTEN -P | grep mysql 
 
-mysqld    37199 sumeetsingh   18u  IPv4 0x4854526e13fbf6b6      0t0  TCP localhost:33060 (LISTEN)
-mysqld    37199 sumeetsingh   20u  IPv4 0x5d9b0a6e5c20275a      0t0  TCP localhost:3306 (LISTEN)
+mysqld    37199 sumeetChand   18u  IPv4 0x4854526e13fbf6b6      0t0  TCP localhost:33060 (LISTEN)
+mysqld    37199 sumeetChand   20u  IPv4 0x5d9b0a6e5c20275a      0t0  TCP localhost:3306 (LISTEN)
 ```
 
 LOCAL DB AS ROOT
@@ -226,7 +226,7 @@ mysql> describe users;
 17. CREATE NEW USER
 ```bash
 INSERT INTO users (username, email, password, subscriptions, notes) 
-VALUES ('sum337', 'sumeet.singhji@outlook.com', SHA2('Password!', 256), '', '');
+VALUES ('sum337', 'sumeet.Chandji@outlook.com', SHA2('Password!', 256), '', '');
 ```
 
 18. To has an SHA256 password follow above Hash password section
@@ -243,7 +243,7 @@ select * from users where username = "sum337";
 +--------+----------+----------------------------+----------------------+---------------+----------------+---------------+--------------+----------------+-------+---------------+
 | userID | username | email                      | password             | onMailingList | pending_orders | order_history | open_tickets | closed_tickets | notes | subscriptions |
 +--------+----------+----------------------------+----------------------+---------------+----------------+---------------+--------------+----------------+-------+---------------+
-|      1 | sum337   | sumeet.singhji@outlook.com | $2a$10$H/O/I3b6YfoA5 |             0 |              0 |             0 |            0 |              0 |       |               |
+|      1 | sum337   | sumeet.Chandji@outlook.com | $2a$10$H/O/I3b6YfoA5 |             0 |              0 |             0 |            0 |              0 |       |               |
 +--------+----------+----------------------------+----------------------+---------------+----------------+---------------+--------------+----------------+-------+---------------+
 1 row in set (0.00 sec)
 ```
@@ -285,7 +285,7 @@ CREATE TABLE users (
     notes VARCHAR(1000) NOT NULL
 );
 INSERT INTO users (username, email, password, subscriptions, notes)
-VALUES ('sum337', 'sumeet.singhji@outlook.com', '$2a$10$9JsnQAMsal.4iMhX.CnZXuy9aCILeipHjLt8MGf5h.JJ64KSg.uOy', '', '');
+VALUES ('sum337', 'sumeet.Chandji@outlook.com', '$2a$10$9JsnQAMsal.4iMhX.CnZXuy9aCILeipHjLt8MGf5h.JJ64KSg.uOy', '', '');
 ```
 
 
@@ -324,6 +324,6 @@ node HashPassword.js
 
 4. You will get an output similar to below
 ```bash
-sumeetsingh@Sumeets-Air backend % node HashPassword.js
+sumeetChand@Sumeets-Air backend % node HashPassword.js
 Hashed password: $2a$10$9JsnQAMsal.4iMhX.CnZXuy9aCILeipHjLt8MGf5h.JJ64KSg.uOy
 ```
