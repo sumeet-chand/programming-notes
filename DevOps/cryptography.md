@@ -1,7 +1,7 @@
 
 # CRYPTOGRAPHY
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: October 2024
 
@@ -124,6 +124,6 @@ bcrypt.hash(password, saltRounds, (err, hash) => {
 2. run the file with node and the output value is the hashed password that can be entered anywhere
 that is encrupted with that encryption (i.e, a MySQL DB with SHA256)
 ```bash
-sumeetsingh@Sumeets-Air backend % node HashPassword.js
+sumeetChand@Sumeets-Air backend % node HashPassword.js
 Hashed password: $2a$10$9JsnQAMsal.4iMhX.CnZXuy9aCILeipHjLt8MGf5h.JJ64KSg.uOy
 ```
