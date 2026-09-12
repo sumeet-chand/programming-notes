@@ -1,6 +1,6 @@
 
 # REVERSE ENGINEERING
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: January 2025
 
