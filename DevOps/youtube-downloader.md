@@ -1,7 +1,7 @@
 
 # YOUTUBE DOWNLOADER USE GUIDE
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: July 2024
 
