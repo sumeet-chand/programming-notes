@@ -1,7 +1,7 @@
 
 # PROGRAMMING WITH VSCODE
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: July 2024
 
