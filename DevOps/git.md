@@ -1,7 +1,7 @@
 
 # PROGRAMMING WITH GIT
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: July 2024
 
@@ -20,7 +20,7 @@ Date: July 2024
 TERMINOLOGIES
 * repo: Short for repository the location
 * upstream: the original repo e.g, vedic-lang
-* origin: your fork of upstream e.g, SumeetSinghJi/vedic-lang
+* origin: your fork of upstream e.g, SumeetChand/vedic-lang
 * no upstream: it means the repo maintainers dont allow pull request merging which means not open source
 
 # INSTALLING
