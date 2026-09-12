@@ -1,7 +1,8 @@
 
 # PROGRAMMING WITH RUBY
 
-By: Sumeet Singh
+By: Sumeet Chand
+
 Date: July 2024
 
 # TABLE OF CONTENTS
@@ -37,7 +38,7 @@ which ruby
 #or
 where ruby
 
-sumeetsingh@Sumeets-Air-2 sandbox % where ruby
+sumeetChand@Sumeets-Air-2 sandbox % where ruby
 /opt/homebrew/Cellar/ruby/3.3.2/bin/ruby
 /usr/bin/ruby
 ```
@@ -50,7 +51,7 @@ for MacOS add the path only to: ~/.zshrc
 EXAMPLE
 
 ```bash
-sumeetsingh@Sumeets-Air-2 sandbox % cat ~/.zshrc   \
+sumeetChand@Sumeets-Air-2 sandbox % cat ~/.zshrc   \
 export PATH="/opt/homebrew/Cellar/ruby/3.3.2/bin:$PATH" # from brew install ruby
 ```
 
@@ -63,7 +64,7 @@ ruby --version
 ```
 EXAMPLE
 ```bash
-sumeetsingh@Sumeets-Air-2 ~ % ruby --version
+sumeetChand@Sumeets-Air-2 ~ % ruby --version
 ruby 3.3.2 (2024-05-30 revision e5a195edf6) [arm64-darwin23]
 ```
 
@@ -79,7 +80,7 @@ gem list
 
 EXAMPLE
 ```bash
-sumeetsingh@Sumeets-Air-2 vedic-lang.github.io % gem list                  
+sumeetChand@Sumeets-Air-2 vedic-lang.github.io % gem list                  
 
 *** LOCAL GEMS ***
 
