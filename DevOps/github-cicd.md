@@ -1,7 +1,7 @@
 
 # GITHUB CICD
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: July 2024
 
@@ -133,7 +133,7 @@ Website www.agnisamooh.com has a S3 bucket to upload the react website live to.
 [vscode-aws-toolkit]
 aws_access_key_id = alksjdalksjdalksjd
 aws_secret_access_key = asjdlkasjdlksajdlkajsdsdjsalk
-2. Then in the GitHub secrets and variables page they are added: the GitHub repo https://.github.com/SumeetSinghJi/agnisamooh.com/settings/secrets/actions
+2. Then in the GitHub secrets and variables page they are added: the GitHub repo https://.github.com/SumeetChandJi/agnisamooh.com/settings/secrets/actions
 3. Then in the project folder a new path is created under ./.github/workflows/actions.yml
 4. The below code is added to it. Now when the code is pushed to GitHub the github actions workflow will trigger which builds
 the react project, then also pushes it to aws S3 using the secret key pair. This way the keys are not exposed to public
@@ -319,7 +319,7 @@ jobs:
         }
 
         # Download the list of runs
-        Invoke-RestMethod -Uri "https://api.github.com/repos/SumeetSinghJi/BubbleUp/actions/runs" -Headers $headers | ConvertTo-Json | Set-Content -Path runs.json
+        Invoke-RestMethod -Uri "https://api.github.com/repos/SumeetChandJi/BubbleUp/actions/runs" -Headers $headers | ConvertTo-Json | Set-Content -Path runs.json
 
         # Iterate through runs to find one with artifacts
         $runs = Get-Content -Path runs.json | ConvertFrom-Json
@@ -329,7 +329,7 @@ jobs:
             Write-Output "Checking run ID: $runId"
 
             # Get artifacts for the specific run
-            Invoke-RestMethod -Uri "https://api.github.com/repos/SumeetSinghJi/BubbleUp/actions/runs/$runId/artifacts" -Headers $headers | ConvertTo-Json | Set-Content -Path artifacts.json
+            Invoke-RestMethod -Uri "https://api.github.com/repos/SumeetChandJi/BubbleUp/actions/runs/$runId/artifacts" -Headers $headers | ConvertTo-Json | Set-Content -Path artifacts.json
 
             $artifacts = Get-Content -Path artifacts.json | ConvertFrom-Json
             foreach ($artifact in $artifacts.artifacts) {
@@ -338,7 +338,7 @@ jobs:
                 Write-Output "Artifact found in run ID: $runId"
 
                 # Download the artifact
-                $artifactUrl = "https://api.github.com/repos/SumeetSinghJi/BubbleUp/actions/artifacts/$artifactId/zip"
+                $artifactUrl = "https://api.github.com/repos/SumeetChandJi/BubbleUp/actions/artifacts/$artifactId/zip"
                 $outputPath = "C:\windows-ffmpeg-build.zip"
                 Write-Output "Downloading artifact from $artifactUrl to $outputPath"
                 Invoke-RestMethod -Uri $artifactUrl -Headers $headers -OutFile $outputPath
@@ -422,7 +422,7 @@ jobs:
           # iterate backwards from most recent run to see if any run has artifact that matches name to use to download later on in workflow
           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Accept: application/vnd.github.v3+json" \
-              https://api.github.com/repos/SumeetSinghJi/BubbleUp/actions/runs \
+              https://api.github.com/repos/SumeetChandJi/BubbleUp/actions/runs \
               -o runs.json
 
           # Iterate through runs to find one with artifacts
@@ -431,7 +431,7 @@ jobs:
             echo "Checking run ID: $id"
             curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                 -H "Accept: application/vnd.github.v3+json" \
-                https://api.github.com/repos/SumeetSinghJi/BubbleUp/actions/runs/$id/artifacts \
+                https://api.github.com/repos/SumeetChandJi/BubbleUp/actions/runs/$id/artifacts \
                 -o artifacts.json
 
             ARTIFACT_ID=$(jq -r '.artifacts[] | select(.name == "linux-ffmpeg-build") | .id' artifacts.json)
@@ -439,7 +439,7 @@ jobs:
               echo "Artifact found in run ID: $id"
               curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                   -H "Accept: application/vnd.github.v3+json" \
-                  https://api.github.com/repos/SumeetSinghJi/BubbleUp/actions/artifacts/$ARTIFACT_ID/zip \
+                  https://api.github.com/repos/SumeetChandJi/BubbleUp/actions/artifacts/$ARTIFACT_ID/zip \
                   --output linux-ffmpeg-build.zip
               unzip linux-ffmpeg-build.zip -d /home/runner/
               exit 0
