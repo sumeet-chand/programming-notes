@@ -1,7 +1,7 @@
 
 # PROGRAMMING WITH NODE
 
-By: Sumeet Singh
+By: Sumeet Chand
 
 Date: July 2024
 
@@ -478,8 +478,8 @@ S3 bucket
 
 1. Change to parent directory to host website project directory
 ```bash
-cd c:\users\sumeetsingh\Documents ; #windows
-cd /Users/sumeetsingh/Documents ; #macos
+cd c:\users\sumeetChand\Documents ; #windows
+cd /Users/sumeetChand/Documents ; #macos
 ```
 
 2. Install create-react-app globally. Recommended as it will hold all other libs
@@ -531,7 +531,7 @@ sed -i "" '12,15d' ./index.js
 ```
 
 7. CHANGE TITLE
-change the <title> tag in /public/index.html to the websites name e.g. <title>Sumeet Singh</title>
+change the <title> tag in /public/index.html to the websites name e.g. <title>Sumeet Chand</title>
 
 8. CD TO SRC
 ```bash
@@ -1337,7 +1337,7 @@ const Login = () => {
                         which would normally be an AWS RDS DB is turned off to save money. 
                         Possibly in the future a Lambda for start/stopping DB will be triggered by LogOn/Token expire/Logoff
                         but for now for a demonstration on how it would act you can see a local server code here:
-                        <a href = "https://github.com/SumeetSinghJi/agnisamooh.com/blob/main/src/components/backend/Server.js">https://github.com/SumeetSinghJi/agnisamooh.com/blob/main/src/components/backend/Server.js</a>
+                        <a href = "https://github.com/SumeetChandJi/agnisamooh.com/blob/main/src/components/backend/Server.js">https://github.com/SumeetChandJi/agnisamooh.com/blob/main/src/components/backend/Server.js</a>
                     </p>
                     <LoginForm />
                 </div>
@@ -2458,23 +2458,23 @@ lsof -i :5000
 netstat -ano | findstr :5000
 
 e.g, 
-sumeetsingh@Sumeets-Air backend % lsof -i :5000
+sumeetChand@Sumeets-Air backend % lsof -i :5000
 COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
-ControlCe 503 sumeetsingh   10u  IPv4 0x7ba65b3bbc2c31c6      0t0  TCP *:commplex-main (LISTEN)
-ControlCe 503 sumeetsingh   11u  IPv6 0x147a291c7d81ae39      0t0  TCP *:commplex-main (LISTEN)
+ControlCe 503 sumeetChand   10u  IPv4 0x7ba65b3bbc2c31c6      0t0  TCP *:commplex-main (LISTEN)
+ControlCe 503 sumeetChand   11u  IPv6 0x147a291c7d81ae39      0t0  TCP *:commplex-main (LISTEN)
 
 
 #if port is in use then find what the PID is with
 ps -p 503
 
 e.g, 
-sumeetsingh@Sumeets-Air backend % ps -p 503
+sumeetChand@Sumeets-Air backend % ps -p 503
   PID TTY           TIME CMD
   503 ??        14:26.37 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCe
 
 # since that port is MacOS Airplay e.g. for sharing Apple devices let's use the next port up 5001
-sumeetsingh@Sumeets-Air sandbox % lsof -i :5001
-sumeetsingh@Sumeets-Air sandbox % 
+sumeetChand@Sumeets-Air sandbox % lsof -i :5001
+sumeetChand@Sumeets-Air sandbox % 
 
 # since port 5001 is free lets use that
 ```
@@ -2724,7 +2724,7 @@ cd components/backend
 node Server.js
 
 e.g,
-cd /Users/sumeetsingh/Documents/agnisamooh.com/src/components/backend
+cd /Users/sumeetChand/Documents/agnisamooh.com/src/components/backend
 node Server.js
 ```
 
